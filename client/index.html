@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnrvbQNqZOb5S7VUS6n9lzVxBvf6x6I3Shi5ePzJN9mw&s"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="pageTitle">SurajEstate</title>
+    <script>
+      // Function to set the title based on the URL
+      function setTitle() {
+        var url = window.location.href;
+        var title = "SurajEstate"; // Default title
+
+        if (url.includes("signup")) {
+          title = "SignUp";
+        } else if (url.includes("login")) {
+          title = "Login";
+        } else if (url.includes("about")) {
+          title = "About";
+        } else if (url.includes("contact")) {
+          title = "Contact";
+        }
+        document.getElementById("pageTitle").innerText = title;
+      }
+
+      // Call the function when the page loads
+      window.onload = setTitle;
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

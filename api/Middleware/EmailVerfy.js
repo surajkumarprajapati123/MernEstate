@@ -1,0 +1,1 @@
+const EmailVerification = async (email) => {};
